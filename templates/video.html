@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+    <header id="header">
+        <div align="center">
+            <strong>平台：{{ where }}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ID：{{ id }}</strong>
+        </div>
+    </header>
+{% endblock %}
+
+{% block images %}
+    <br>
+    <div align="center">
+        <i><a href="https://live.kuaishou.com/search/?keyword=1945408" target="_blank" class="button primary icon solid fa-search">点击关注小姐姐</a></i>
+        <br>
+        <br>
+        <video width="400px" src="{{ video }}" controls></video>
+    </div>
+{% endblock %}

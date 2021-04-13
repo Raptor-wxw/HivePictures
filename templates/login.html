@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block images %}
+    <br>
+    <br>
+    <form method="post" action="" name="outer">
+        <div class="row gtr-uniform">
+            <div class="col-6 col-12-xlarge">
+                <input type="email" name="email" id="demo-email" value="" placeholder="邮箱"/>
+            </div>
+            <div class="col-6 col-12-xlarge">
+                <input type="password" name="password" id="demo-password" value="" placeholder="密码"/>
+            </div>
+            <div class="col-12" align="center">
+                <ul class="actions">
+                    <li><input type="submit" value="登录" class="primary"/></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+{% endblock %}

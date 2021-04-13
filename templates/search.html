@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block lead %}
+    <style type="text/css">
+		.my_image{
+			text-align: center;
+			color: #147eff;
+		}
+	</style>
+    <section class="my_image">
+        <header>
+            <h1>Hi, THIS IS A GALLERY</h1>
+            <p>一个免费的图片分享网站</p>
+        </header>
+    </section>
+{% endblock %}
+
+{% block images %}
+    <section>
+        <header class="major" style="text-align: center">
+            <h2>{{ text }}</h2>
+        </header>
+        <div class="posts">
+            {% for pic in pics %}
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' pic.package %}" class="image"><img src="{{ pic.first_pic }}" alt="" />{{ pic.text }}</a>
+                    <a href="{% url 'One:picture' pic.package %}" class="button">展开</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

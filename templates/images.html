@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+
+{% block lead %}
+    <style type="text/css">
+		.my_image{
+			text-align: center;
+			color: #147eff;
+		}
+	</style>
+    <section class="my_image">
+        <header>
+            <h1>Hi, THIS IS A GALLERY</h1>
+            <p>一个免费的图片分享网站</p>
+        </header>
+    </section>
+{% endblock %}
+
+{% block page %}
+    <div align="center">
+        <ul class="pagination">
+            <li><span class="button">上一页</span></li>
+{#            <li><a href="{% url 'One:image' %}" class="page active">1</a></li>#}
+{#            <li><a href="{% url 'One:image' %}" class="page">2</a></li>#}
+{#            <li><a href="{% url 'One:image' %}" class="page">3</a></li>#}
+{#            <li><a href="{% url 'One:image' %}" class="page">4</a></li>#}
+{#            <li><a href="{% url 'One:image' %}" class="page">5</a></li>#}
+            <li><a href="{% url 'One:image' %}" class="button">下一页</a></li>
+        </ul>
+    </div>
+{% endblock %}

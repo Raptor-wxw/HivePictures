@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    {% load static %}
+	<head>
+		<title>关于我</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {{ alert|safe }}
+		<link rel="stylesheet" href="{% static 'assets_about/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets_about/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="{% url 'One:index' %}">蜂巢图库</a></h1>
+				<nav>
+					<ul>
+                        <li><a href="{% url 'One:index' %}">首页</a></li>
+						<li><a href="#intro">顶部</a></li>
+						<li><a href="#one">关于我</a></li>
+						<li><a href="#two">我的职业</a></li>
+						<li><a href="#contact">反馈建议</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>你好</h2>
+					</header>
+					<p>人间四月芳菲尽，山寺桃花始盛开<br />
+					欢迎来到<strong>蜂巢图库</strong>，一个图片写真分享网站</p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Who I Am</h2>
+					</header>
+					<p>&emsp;&emsp;你好，我叫夜寒，现在20岁。<br>&emsp;&emsp;这个蜂巢图库是我的第一个网站，
+                        它诞生于2020年疫情期间。那时我在家没事干，于是去了解了爬虫，觉得爬虫很有意思。
+                        在学习爬虫的同时发现许多图片也非常养眼，于是想自己建立一个网站，专门展示这些图片。
+                        于是我去学习了Django框架，在一周的艰苦学习后我开始着手规划，慢慢的便诞生了这个网站。</p>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>What I Do</h2>
+					</header>
+					<p>&emsp;&emsp;我是一位在读本科生，在<a href="https://blog.csdn.net/qq_35572368">CSDN论坛建立有博客</a>，
+                        相关学习交流会不时发到博客里。如果大家想要互相学习交流，
+                        也可以加入QQ交流群<a href="https://jq.qq.com/?_wv=1027&k=GhOP3rsI">103172845</a>。
+                        这个网站从前端到后端都是我一人独立开发，每个函数都是独立构思编写，有兴趣的同学可以共同交流，也可以提出建议。</p>
+				</div>
+				<a href="#contact" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>反馈建议</h2>
+						<p>请在这里给我提出您宝贵的建议，我会在仔细斟酌后将反馈结果发送到您的邮箱。</p>
+					</header>
+					<div class="box">
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="姓名" /></div>
+								<div class="field half"><input type="email" name="email" placeholder="邮箱" /></div>
+								<div class="field"><textarea name="message" placeholder="内容" rows="6"></textarea></div>
+							</div>
+							<ul class="actions special">
+								<li><input type="submit" value="发送" /></li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets_about/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets_about/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'assets_about/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets_about/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets_about/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets_about/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets_about/js/util.js' %}"></script>
+			<script src="{% static 'assets_about/js/main.js' %}"></script>
+
+	</body>
+</html>

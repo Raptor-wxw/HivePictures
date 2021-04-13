@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Banner -->
+{% block lead %}
+    <section id="banner">
+        <div class="content">
+            <header>
+                <h1>Hi, THIS IS A<br/>
+                    GALLERY</h1>
+                <p>这是一个免费的图片分享网站</p>
+            </header>
+            <p>本站站长是 <a href="http://wpa.qq.com/msgrd?v=3&uin=296854007&site=qq&menu=yes">@暮至夜寒</a>，一个喜欢图片的好孩子。<br>
+                网站创建于2020年，目前在试用阶段，还未正式投入开放。<br>
+                网站致力于为各位美图爱好者，打造一个高清图片写真欣赏网站。<br>
+                希望大家可以喜欢这里图片，找到属于自己的快乐空间。同时欢迎大家为网站提供更多、更优质的图片。</p>
+            <ul class="actions">
+                <li><a href="{% url 'One:about' %}" class="button big">展开更多</a></li>
+            </ul>
+        </div>
+        <span class="image object">
+			<a href="{% url 'One:about' %}"><img src="{% static 'images/introduction.jpg' %}" alt="关于我"/></a>
+		</span>
+    </section>
+{% endblock %}
+
+{% block images %}
+    <section>
+        <header class="major">
+            <h2>美女图片</h2>
+        </header>
+        <div class="posts">
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package1 %}" class="image"><img src="{{ photo1 }}" alt="" />{{ text1 }}</a>
+                    <a href="{% url 'One:picture' package1 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package2 %}" class="image"><img src="{{ photo2 }}" alt="" />{{ text2 }}</a>
+                    <a href="{% url 'One:picture' package2 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package3 %}" class="image"><img src="{{ photo3 }}" alt="" />{{ text3 }}</a>
+                    <a href="{% url 'One:picture' package3 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package4 %}" class="image"><img src="{{ photo4 }}" alt="" />{{ text4 }}</a>
+                    <a href="{% url 'One:picture' package4 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package5 %}" class="image"><img src="{{ photo5 }}" alt="" />{{ text5 }}</a>
+                    <a href="{% url 'One:picture' package5 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package6 %}" class="image"><img src="{{ photo6 }}" alt="" />{{ text6 }}</a>
+                    <a href="{% url 'One:picture' package6 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package7 %}" class="image"><img src="{{ photo7 }}" alt="" />{{ text7 }}</a>
+                    <a href="{% url 'One:picture' package7 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package8 %}" class="image"><img src="{{ photo8 }}" alt="" />{{ text8 }}</a>
+                    <a href="{% url 'One:picture' package8 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package9 %}" class="image"><img src="{{ photo9 }}" alt="" />{{ text9 }}</a>
+                    <a href="{% url 'One:picture' package9 %}" class="button">展开</a>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <a href="{% url 'One:picture' package10 %}" class="image"><img src="{{ photo10 }}" alt="" />{{ text10 }}</a>
+                    <a href="{% url 'One:picture' package10 %}" class="button">展开</a>
+                </div>
+            </article>
+        </div>
+    </section>
+{% endblock %}
+
+{% block page %}
+    <div align="center">
+        <ul class="pagination">
+            <li><span class="button disabled">上一页</span></li>
+            <li><a href="{% url 'One:image' %}" class="page active">1</a></li>
+            <li><a href="{% url 'One:image' %}" class="page">2</a></li>
+            <li><a href="{% url 'One:image' %}" class="page">3</a></li>
+            <li><a href="{% url 'One:image' %}" class="page">4</a></li>
+            <li><a href="{% url 'One:image' %}" class="page">5</a></li>
+            <li><a href="{% url 'One:image' %}" class="button">下一页</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+<!-- Section -->
+{% block recommend %}
+    <section>
+        <header class="major">
+            <h2>相关推荐</h2>
+        </header>
+        <div class="mini-posts">
+            <article>
+                <a href="{% url 'One:picture' package11 %}" class="image"><img src="{{ photo11 }}"/></a>
+                <p>详情</p>
+            </article>
+            <article>
+                <a href="{% url 'One:picture' package12 %}" class="image"><img src="{{ photo12 }}"/></a>
+                <p>详情</p>
+            </article>
+            <article>
+                <a href="{% url 'One:picture' package13 %}" class="image"><img src="{{ photo13 }}"/></a>
+                <p>详情</p>
+            </article>
+        </div>
+        <ul class="actions">
+            <li><a href="" class="button">更多</a></li>
+        </ul>
+    </section>
+{% endblock %}
+
+<!-- Section -->
+<section>
+    <header class="major">
+        <h2>联系方式</h2>
+    </header>
+    <p>相关合作可以发送邮件或添加微信详细商谈 <br>
+        视频动态可以关注哔哩哔哩： <a href="https://space.bilibili.com/38730122">暮至夜寒</a> <br>
+        获取更多动态其他欢迎关注新浪微博 <br>
+        欢迎关注微信公众号“<a href="https://mp.weixin.qq.com/s/8CW6keprEKCDpAKsWVg8sg">夜寒信息</a>”</p>
+    <ul class="contact">
+        <li class="icon solid fa-envelope">296854007@qq.com</li>
+        <li class="icon brands fa-qq"><a href="https://jq.qq.com/?_wv=1027&k=GhOP3rsI">103172845</a></li>
+        <li class="icon brands fa-weixin">Rem_wife</li>
+        <li class="icon brands fa-weibo"><a href="https://weibo.com/6828815182/profile?topnav=1&wvr=6">暮至夜寒</a>
+        </li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; 鲁 ICP备 20021250</p>
+</footer>
+
+<!-- Scripts -->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/browser.min.js' %}"></script>
+<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+<script src="{% static 'assets/js/util.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>

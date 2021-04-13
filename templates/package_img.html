@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block images %}
+    <section>
+        <header class="major" style="text-align: center">
+            <h2>{{ text }}</h2>
+        </header>
+        <div class="posts">
+            {% for pic in pics %}
+            <article>
+                <div>
+                    <a href="" class="image"><img style="width: 100%;" src="{{ pic.photo }}" alt="" /></a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        {% load static %}
+		<title>蜂巢图库</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets_show/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets_show/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload-0 is-preload-1 is-preload-2">
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>蜂巢图库</h1>
+						<p>这是为您随机推荐的几个写真合集 <br><a href="{% url 'One:index' %}">回到首页</a></p>
+					</header>
+
+				<!-- Thumbnail -->
+					<section id="thumbnails">
+                        <article>
+                            <a class="thumbnail" href="{{ photo1 }}" data-position="left center"><img src="{{ photo1 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text1 }}</p></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="{{ photo2 }}"><img src="{{ photo2 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text2 }}</p></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="{{ photo3 }}" data-position="top center"><img src="{{ photo3 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text3 }}</p></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="{{ photo4 }}"><img src="{{ photo4 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text4 }}</p></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="{{ photo5 }}" data-position="top center"><img src="{{ photo5 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text5 }}</p></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="{{ photo6 }}"><img src="{{ photo6 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text6 }}</p></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="{{ photo7 }}"><img src="{{ photo7 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text7 }}</p></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="{{ photo8 }}"><img src="{{ photo8 }}" alt="" /></a>
+                            <a href="{% url 'One:index' %}"><h2>点击展开</h2></a>
+							<a href="{% url 'One:index' %}"><p>{{ text8 }}</p></a>
+						</article>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets_show/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets_show/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets_show/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets_show/js/main.js' %}"></script>
+
+	</body>
+</html>

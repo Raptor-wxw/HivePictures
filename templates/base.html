@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+    {% load static %}
+	<head>
+		<title>色批之家</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="icon" href="{% static 'images/Hive.ico' %}" type="image/x-icon">
+		<link rel="shortcut icon" href="{% static 'images/Hive.ico' %}" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+                            {% block header %}
+								<header id="header">
+									<a href="{% url 'One:index' %}" class="logo"><strong>蜂巢图库</strong></a>
+									<ul class="icons">
+										<li><a href="" class="icon brands fa-qq"><span class="label">QQ</span></a></li>
+										<li><a href="" class="icon brands fa-weixin"><span class="label">微信</span></a></li>
+										<li><a href="" class="icon brands fa-weibo"><span class="label">微博</span></a></li>
+									</ul>
+								</header>
+                            {% endblock %}
+
+							<!-- Banner -->
+                            {% block lead %}
+
+                            {% endblock %}
+
+
+                            {% block images %}
+
+                            {% endblock %}
+
+                            {% block page %}
+
+                            {% endblock %}
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+                {% block navigation %}
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="">
+										<input type="text" name="query" id="query" placeholder="搜索" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{% url 'One:index' %}">主页</a></li>
+										<li><a href="{% url 'One:show' %}">随便看看</a></li>
+										<li><a href="{% url 'One:video' %}">视频随播</a></li>
+										<li>
+											<span class="opener">名优馆</span>
+											<ul>
+												<li><a href="{% url 'One:search' '森萝财团' %}">森萝财团</a></li>
+												<li><a href="{% url 'One:search' '尤蜜荟' %}">尤蜜荟</a></li>
+												<li><a href="{% url 'One:search' 'Coser' %}">Coser</a></li>
+												<li><a href="{% url 'One:search' '模范学院' %}">模范学院</a></li>
+                                                <li><a href="{% url 'One:search' '喵糖映画' %}">喵糖映画</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">相关分类</span>
+											<ul>
+												<li><a href="{% url 'One:search' '制服丝袜' %}">制服丝袜</a></li>
+												<li><a href="{% url 'One:search' '清纯妹子' %}">清纯妹子</a></li>
+												<li><a href="{% url 'One:search' '少女萝莉' %}">少女萝莉</a></li>
+												<li><a href="{% url 'One:search' '性感美女' %}">性感美女</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">名优推荐</span>
+											<ul>
+												<li><a href="{% url 'One:search' '桜桃喵' %}">桜桃喵</a></li>
+												<li><a href="{% url 'One:search' '徐微微' %}">徐微微</a></li>
+												<li><a href="{% url 'One:search' '小尤奈' %}">小尤奈</a></li>
+												<li><a href="{% url 'One:search' '糯美子Mini' %}">糯美子Mini</a></li>
+											</ul>
+										</li>
+                                        <li><a href="">讨论交流</a></li>
+										<li><a href="{% url 'One:suggestion' %}">意见反馈</a></li>
+										<li><a href="{% url 'One:register' %}">注册</a></li>
+										<li><a href="{% url 'One:login' %}">登录</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+                            {% block recommend %}
+
+                            {% endblock %}
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>联系方式</h2>
+									</header>
+									<p>相关合作可以发送邮件或添加微信详细商谈 <br>
+                                        视频动态可以关注哔哩哔哩： <a href="https://space.bilibili.com/38730122">暮至夜寒</a> <br>
+                                        获取更多动态其他欢迎关注新浪微博 <br>
+                                        欢迎关注微信公众号“<a href="https://mp.weixin.qq.com/s/8CW6keprEKCDpAKsWVg8sg">夜寒信息</a>”</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope">296854007@qq.com</li>
+                                        <li class="icon brands fa-qq"><a href="https://jq.qq.com/?_wv=1027&k=GhOP3rsI">103172845</a></li>
+										<li class="icon brands fa-weixin">Rem_wife</li>
+										<li class="icon brands fa-weibo"><a href="https://weibo.com/6828815182/profile?topnav=1&wvr=6">暮至夜寒</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; 鲁 ICP备  20021250</p>
+								</footer>
+						</div>
+					</div>
+                {% endblock %}
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
