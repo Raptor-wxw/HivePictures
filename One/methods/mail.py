@@ -24,4 +24,4 @@ def mail(email, title, content):    # 收件人邮箱， 邮件标题， 邮件�
     except smtplib.SMTPException:
         return 0
 
-mail(2689969038, '123', '123')
+# mail(2689969038, '123', '123')

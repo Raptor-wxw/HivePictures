@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'Hive.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Hive',
+        'NAME': 'hive',
         'USER': 'admin',
         'PASSWORD': 'eW2PSJbBBhkT',
-        'HOST': '47.104.171.3',
+        'HOST': '8.129.179.58',
         'PORT': '3306',
     }
 }
